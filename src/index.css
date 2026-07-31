@@ -118,6 +118,16 @@ body {
   100% { transform: scale(1); opacity: 1; }
 }
 
+@keyframes modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-rise {
+  from { transform: translateY(14px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
 @keyframes shake-tilt {
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(-1.5deg); }
@@ -132,10 +142,12 @@ body {
 .animate-grand-title { animation: grand-title 1.1s cubic-bezier(.17,.89,.32,1.28) both; }
 .animate-rainbow { animation: rainbow-text 4s linear infinite; }
 .animate-shake-tilt { animation: shake-tilt 0.4s ease-in-out infinite; }
+.animate-modal-fade { animation: modal-fade 180ms ease-out both; }
+.animate-modal-rise { animation: modal-rise 240ms cubic-bezier(.17,.89,.32,1.16) both; }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-pulse-dot, .animate-orb-pulse, .animate-bounce-up, .animate-float-slow,
-  .animate-ray-spin, .animate-shake-tilt {
+  .animate-ray-spin, .animate-shake-tilt, .animate-modal-fade, .animate-modal-rise {
     animation: none;
   }
 }
