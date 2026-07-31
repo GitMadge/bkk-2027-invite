@@ -163,7 +163,7 @@ const GUIDE_CARDS = [
     title: 'Rules & values',
     blurb: '🤫 A few things we live by.',
     lines: RULES,
-    image: { src: '/no-fighting-sign.png', alt: 'Police reminder sign: fighting is prohibited' },
+    image: { src: `${import.meta.env.BASE_URL}no-fighting-sign.png`, alt: 'Police reminder sign: fighting is prohibited' },
   },
   ...GUIDE,
 ]
