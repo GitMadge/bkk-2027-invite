@@ -71,8 +71,8 @@ const DAYS = [
     title: 'Day 5 — Buffet and Farm tour',
     date: 'Thu, Mar 4· BKK',
     items: [
-      { label: 'Medicana Lab Co.', href: PINS.medicana },
       { label: 'Baiyoke Sky Buffet', href: PINS.baiyoke },
+      { label: 'Medicana Lab Co.', href: PINS.medicana },
     ],
   },
   {
