@@ -88,13 +88,13 @@ const DAYS = [
 ]
 
 const EXPENSES = [
-  ['✈️ RT Flight', '₱10,000', 'Estimated max budget'],
-  ['🏡 Stay', '₱11,000', 'Estimated max budget'],
-  ['🍜 Food', '₱10,000', ''],
-  ['🌿 Extras', '₱5,000', ''],
-  ['🚌 Transportation', '₱3,000', ''],
-  ['🎟️ Activities', 'TBD', ''],
-  ['🆘 Emergency fund', '₱5,000', ''],
+  ['✈️ RT Flight', '₱10,000'],
+  ['🏡 Stay', '₱11,000'],
+  ['🍜 Food', '₱10,000'],
+  ['🌿 Extras', '₱5,000'],
+  ['🚌 Transportation', '₱3,000'],
+  ['🎟️ Activities', 'TBD'],
+  ['🆘 Emergency fund', '₱5,000'],
 ]
 
 // Rows like 'TBD' carry no number, so they contribute 0 and get called out in the note.
@@ -459,33 +459,32 @@ export default function PerksSection() {
             <span className="rounded-full border px-2.5 py-1 font-mono text-[10px]" style={{ borderColor: 'rgba(255,255,255,0.09)', color: 'var(--color-text-3)' }}>Already scoped</span>
           </div>
           <h3 className="mb-1 font-[var(--font-display)] text-lg font-semibold" data-reveal>We already know what this costs</h3>
-          <p className="mb-4 text-sm" style={{ color: 'var(--color-text-2)' }} data-reveal>No surprise expenses. Here's the real per-person range.</p>
+          <p className="mb-4 text-sm" style={{ color: 'var(--color-text-2)' }} data-reveal>Here's the per-person range with estimated budgets, not locked-in prices.</p>
           <div className="overflow-x-auto" data-reveal>
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr>
-                  {['Category', 'Amount', 'Note'].map((h) => (
+                  {['Category', 'Amount'].map((h) => (
                     <th key={h} className="border-b px-2.5 py-2 text-left font-mono text-[10.5px] uppercase tracking-wide" style={{ borderColor: 'rgba(255,255,255,0.16)', color: 'var(--color-text-3)' }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {EXPENSES.map(([cat, amt, note]) => (
+                {EXPENSES.map(([cat, amt]) => (
                   <tr key={cat}>
                     <td className="border-b px-2.5 py-2.5 font-medium" style={{ borderColor: 'rgba(255,255,255,0.09)' }}>{cat}</td>
                     <td className="border-b px-2.5 py-2.5" style={{ borderColor: 'rgba(255,255,255,0.09)', color: 'var(--color-text-2)' }}>{amt}</td>
-                    <td className="border-b px-2.5 py-2.5" style={{ borderColor: 'rgba(255,255,255,0.09)', color: 'var(--color-text-2)' }}>{note}</td>
                   </tr>
                 ))}
               </tbody>
               <tfoot>
                 <tr>
                   <td className="px-2.5 py-3 font-mono text-xs uppercase tracking-wide" style={{ color: 'var(--color-cyan)' }}>Total</td>
-                  <td className="px-2.5 py-3 font-semibold" style={{ color: 'var(--color-cyan)' }}>
-                    ₱{EXPENSE_TOTAL.toLocaleString('en-US')}
-                  </td>
-                  <td className="px-2.5 py-3 text-xs" style={{ color: 'var(--color-text-3)' }}>
-                    {UNPRICED > 0 ? `Per person, excl. ${UNPRICED} TBD item${UNPRICED > 1 ? 's' : ''}` : 'Per person'}
+                  <td className="px-2.5 py-3" style={{ color: 'var(--color-cyan)' }}>
+                    <span className="font-semibold">₱{EXPENSE_TOTAL.toLocaleString('en-US')}</span>
+                    <span className="ml-1.5 font-mono text-[10.5px] font-normal" style={{ color: 'var(--color-text-3)' }}>
+                      {UNPRICED > 0 ? `/ person, excl. ${UNPRICED} TBD item${UNPRICED > 1 ? 's' : ''}` : '/ person'}
+                    </span>
                   </td>
                 </tr>
               </tfoot>
