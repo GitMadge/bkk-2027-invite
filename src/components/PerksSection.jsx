@@ -153,7 +153,7 @@ const RULES = [
   "🛠️ Acknowledge mistakes, and apologize early, forgive fast, help fix the situation.",
   '🤐 Friends keep secrets. Cherish good memories.',
   '🎟️ 420 invites are welcome.',
-  '☮️ Peace and love :P',
+  '☮️ Peace and love',
 ]
 
 // Rules is just another guide card, so it shares the grid + modal instead of being
