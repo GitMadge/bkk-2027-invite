@@ -13,7 +13,7 @@ const PINS = {
   jimThompson:
     'https://www.google.com/maps/place/Jim+Thompson+House+Museum/@13.7461149,100.4817265,14z/data=!4m10!1m3!11m2!2s6eCp2KMO70RRSMOwaMCKnQ!3e3!3m5!1s0x30e2993284fb5459:0xe984516d7ba19318!8m2!3d13.7493569!4d100.5281613!16s%2Fm%2F03hlbr1',
   nnh:
-    'https://www.google.com/maps/place/NNH+(Soi+Nana+-+Chinatown)/@13.7408624,100.4705685,14z/data=!4m10!1m3!11m2!2s6eCp2KMO70RRSMOwaMCKnQ!3e3!3m5!1s0x30e299003369081f:0x3d47ccda8b524336!8m2!3d13.7398483!4d100.5139754!16s%2Fg%2F11wxvm4w4w',
+    'https://www.google.com/maps/place/Chronic+Dispensary+@I%27m+Chinatown+Yaowarat+-+Weed+%E0%B8%81%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B2+Cannabis+CBD+%D0%BC%D0%B0%D1%80%D0%B8%D1%85%D1%83%D0%B0%D0%BD%D0%B0+%E5%A4%A7%E9%BA%BB%E5%95%86%E5%BA%97/@13.7415264,100.4986016,15z/data=!4m10!1m3!11m2!2s6eCp2KMO70RRSMOwaMCKnQ!3e3!3m5!1s0x30e299ed220a04d9:0xead3b55346a16316!8m2!3d13.7415264!4d100.5111728!16s%2Fg%2F11tn8nryb0',
   chinatown:
     'https://www.google.com/maps/place/Chinatown+Bangkok+(Yaowarat)/@13.7408624,100.4705685,14z/data=!4m10!1m3!11m2!2s6eCp2KMO70RRSMOwaMCKnQ!3e3!3m5!1s0x30e2999370ced7ad:0x5857f80ee7e16ad4!8m2!3d13.7408624!4d100.5086773!16s%2Fg%2F11t6wxn1ry',
   kushHouse:
@@ -53,12 +53,12 @@ const DAYS = [
     date: 'Tue, Mar 2 · BKK',
     items: [
       { label: 'Jim Thompson House', href: PINS.jimThompson },
-      { label: '420 @ NNH/Chronic', href: PINS.nnh },
+      { label: '420 @ Chronic', href: PINS.nnh },
       { label: 'Chinatown Night Market', href: PINS.chinatown },
     ],
   },
   {
-    title: 'Day 4 — Mall Day & Night Market',
+    title: 'Day 4 — Mall Day',
     date: 'Wed, Mar 3 · BKK',
     items: [
       { label: 'Kush House', href: PINS.kushHouse },
